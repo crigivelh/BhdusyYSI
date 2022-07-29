@@ -16,9 +16,6 @@ jobs:
       - name: Set up outputs directory
         run: mkdir -p electronics/build/outputs
 
-      - name: Install dependencies
-        run: ./electronics/scripts/dependencies.sh
-
       - name: Export JLCPCB fabrication files [view_base]
         run: |
           ./electronics/scripts/export_jlcpcb.py --release-prefix releases/view_base/ electronics/view_base/view_base.kicad_pcb
